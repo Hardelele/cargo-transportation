@@ -3,7 +3,7 @@ package com.hardelele.ct.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "staff")
+@Table(name = "drivers")
 public class Driver {
 
     @Id

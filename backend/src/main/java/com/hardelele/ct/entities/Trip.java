@@ -4,14 +4,14 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "flights")
-public class Flight {
+public class Trip {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "from")
-    private String from;
+    @Column(name = "departure")
+    private String departure;
 
     @Column(name = "destination")
     private String destination;
@@ -25,11 +25,11 @@ public class Flight {
     @Column(name = "driverPrice")
     private double driverPrice;
 
-    public Flight() {
+    public Trip() {
     }
 
-    public Flight(String from, String destination, long driverId, long carId, double driverPrice) {
-        this.from = from;
+    public Trip(String departure, String destination, long driverId, long carId, double driverPrice) {
+        this.departure = departure;
         this.destination = destination;
         this.driverId = driverId;
         this.carId = carId;
@@ -44,12 +44,12 @@ public class Flight {
         this.id = id;
     }
 
-    public String getFrom() {
-        return from;
+    public String getDeparture() {
+        return departure;
     }
 
-    public void setFrom(String from) {
-        this.from = from;
+    public void setDeparture(String departure) {
+        this.departure = departure;
     }
 
     public String getDestination() {

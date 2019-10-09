@@ -19,7 +19,7 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping(value = "/Users", method = RequestMethod.GET)
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
     public List<User> getAll(){
         return  userRepository.findAll();
     }

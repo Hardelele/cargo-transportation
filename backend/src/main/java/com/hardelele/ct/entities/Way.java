@@ -3,8 +3,8 @@ package com.hardelele.ct.entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "flights")
-public class Trip {
+@Table(name = "ways")
+public class Way {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,10 +25,10 @@ public class Trip {
     @Column(name = "driverPrice")
     private double driverPrice;
 
-    public Trip() {
+    public Way() {
     }
 
-    public Trip(String departure, String destination, long driverId, long carId, double driverPrice) {
+    public Way(String departure, String destination, long driverId, long carId, double driverPrice) {
         this.departure = departure;
         this.destination = destination;
         this.driverId = driverId;

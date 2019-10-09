@@ -19,7 +19,7 @@ public class DriverController {
         this.driverRepository = driverRepository;
     }
 
-    @RequestMapping(value = "/flights", method = RequestMethod.GET)
+    @RequestMapping(value = "/drivers", method = RequestMethod.GET)
     public List<Driver> getAll(){
         return  driverRepository.findAll();
     }

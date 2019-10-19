@@ -1,0 +1,36 @@
+.input {
+    background-color: white;
+    margin: 15px 0 0 0;
+    width: 240px;
+    height: 30px;
+    font-family: Roboto;
+    font-size: 16px;
+    border: 1px rgba(0,0,0,0.41) solid;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+.button {
+    margin-top: 15px;
+    color: rgba(0,0,0,0.80);
+    background-color: white;
+    border-radius: 10px;
+    width: 120px;
+    height: 30px;
+    border: 1px rgba(0,0,0,0.60) solid;
+}
+.button:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.InputBlock {
+    border: 1px rgba(0,0,0,0.41) solid;
+    padding: 0 10px 10px 10px;
+    display: block;
+    margin: 100px auto;
+    width: 260px;
+    height: auto;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.01);
+    text-align: center;
+}

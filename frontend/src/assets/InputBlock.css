@@ -1,9 +1,9 @@
 .input {
+    font-family: Roboto;
     background-color: white;
     margin: 15px 0 0 0;
     width: 240px;
     height: 30px;
-    font-family: Roboto;
     font-size: 16px;
     border: 1px rgba(0,0,0,0.41) solid;
     border-radius: 5px;
@@ -11,6 +11,8 @@
 }
 
 .button {
+    font-family: Roboto;
+    font-size: 16px;
     margin-top: 15px;
     color: rgba(0,0,0,0.80);
     background-color: white;
@@ -24,6 +26,7 @@
 }
 
 .InputBlock {
+    font-family: Roboto;
     border: 1px rgba(0,0,0,0.41) solid;
     padding: 0 10px 10px 10px;
     display: block;

@@ -1,20 +1,13 @@
 import React from 'react'
 import './Footer.css'
+import Language from './components/Language'
+import TechSupport from './components/TechSupport'
 
 let Footer = () => {
     return (
         <div className="Footer">
-            <div className="TechSupport">
-                <div className="Text">
-                    OpenSource:
-                </div>
-                <div className="url">
-
-                </div>
-            </div>
-            <div className="language">
-
-            </div>
+            <TechSupport/>
+            <Language/>
         </div>
     );
 }

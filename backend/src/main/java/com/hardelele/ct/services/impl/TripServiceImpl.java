@@ -65,4 +65,9 @@ public class TripServiceImpl implements TripService {
             throw new NotFoundException("Not found entity with 'id':"+id);
         }
     }
+
+    @Override
+    public void deleteAll() {
+        tripRepository.deleteAll();
+    }
 }

@@ -12,4 +12,5 @@ public interface TripService {
     void add(String departure, String destination, long driverId, long carId, double driverPrice);
     void update(long id, String departure, String destination, long driverId, long carId, double driverPrice) throws NotFoundException;
     void delete(long id) throws NotFoundException;
+    void deleteAll();
 }

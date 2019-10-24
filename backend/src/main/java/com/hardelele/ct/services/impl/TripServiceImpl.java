@@ -7,6 +7,7 @@ import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -26,6 +27,7 @@ public class TripServiceImpl implements TripService {
 
     @Override
     public TripEntity getOneById(Long id) throws NotFoundException {
+
         if (tripRepository.existsById(id)) {
             return tripRepository.getOne(id);
         } else {
@@ -34,22 +36,39 @@ public class TripServiceImpl implements TripService {
     }
 
     @Override
-    public void add(String departure,
-                    String destination,
-                    long driverId,
-                    long carId,
-                    double driverPrice) {
-        TripEntity tripToSave = new TripEntity(departure, destination, driverId, carId, driverPrice);
+    public void add(
+            String departure,
+            String destination,
+            long driverId,
+            long carId,
+            double driverPrice,
+            Date startDate,
+            Date endDate) {
+
+        TripEntity tripToSave = new TripEntity(
+                departure,
+                destination,
+                driverId,
+                carId,
+                driverPrice,
+                startDate,
+                endDate
+        );
         tripRepository.save(tripToSave);
     }
 
     @Override
-    public void update(long id,
-                       String departure,
-                       String destination,
-                       long driverId,
-                       long carId,
-                       double driverPrice) throws NotFoundException {
+    public void update(
+            long id,
+            String departure,
+            String destination,
+            long driverId,
+            long carId,
+            double driverPrice,
+            Date startDate,
+            Date endDate
+    ) throws NotFoundException {
+
         if (tripRepository.existsById(id)){
             TripEntity tripToUpdate = tripRepository.getOne(id);
         } else {
@@ -59,6 +78,7 @@ public class TripServiceImpl implements TripService {
 
     @Override
     public void delete(long id) throws NotFoundException {
+
         if (tripRepository.existsById(id)){
             tripRepository.deleteById(id);
         } else {

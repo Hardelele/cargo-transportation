@@ -1,9 +1,0 @@
-.Footer {
-    background-color: rgba(0,0,0,0.05);
-    border-top: 1px rgba(0,0,0,0.40) solid;
-    position: absolute;
-    bottom: 0;
-    min-width: 100%;
-    width: auto;
-    height: 40px;
-}

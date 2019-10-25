@@ -7,7 +7,6 @@ import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -42,8 +41,8 @@ public class TripServiceImpl implements TripService {
             long driverId,
             long carId,
             double driverPrice,
-            Date startDate,
-            Date endDate) {
+            String startDate,
+            String endDate) {
 
         TripEntity tripToSave = new TripEntity(
                 departure,
@@ -65,8 +64,8 @@ public class TripServiceImpl implements TripService {
             long driverId,
             long carId,
             double driverPrice,
-            Date startDate,
-            Date endDate
+            String startDate,
+            String endDate
     ) throws NotFoundException {
 
         if (tripRepository.existsById(id)){

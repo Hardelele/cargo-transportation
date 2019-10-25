@@ -1,7 +1,6 @@
 package com.hardelele.ct.models;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name = "trips")
@@ -35,22 +34,24 @@ public class TripEntity {
 
     @Basic
     @Column(name = "startDate")
-    private Date startDate;
+    private String startDate;
 
     @Basic
     @Column(name = "endDate")
-    private Date endDate;
+    private String endDate;
 
     public TripEntity() {
     }
 
-    public TripEntity(String departure,
-                      String destination,
-                      long driverId,
-                      long carId,
-                      double driverPrice,
-                      Date startDate,
-                      Date endDate) {
+    public TripEntity(
+            String departure,
+            String destination,
+            long driverId,
+            long carId,
+            double driverPrice,
+            String startDate,
+            String endDate
+    ) {
         this.departure = departure;
         this.destination = destination;
         this.driverId = driverId;
@@ -108,19 +109,19 @@ public class TripEntity {
         this.driverPrice = driverPrice;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 }

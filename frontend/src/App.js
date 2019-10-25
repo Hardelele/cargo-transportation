@@ -1,14 +1,29 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, {Component} from 'react';
+import axios from "axios";
 import './css/App.css';
-import Ways from "./components/Ways";
 
 class App extends Component {
 
+    state = {
+        trips: []
+    };
+
+    componentDidMount() {
+        axios.get('https://localhost:8081/trips')
+            .then(response => {
+                console.log(this.state.trips);
+                const trips = response.data;
+                this.setState({
+                    trips
+                });
+            })
+    }
+
     render() {
         return (
-            <div>
+            <div className="App">
 
+                { this.state.trips.map(trip => <div>{trip.destination}</div>)}
             </div>
         );
     }

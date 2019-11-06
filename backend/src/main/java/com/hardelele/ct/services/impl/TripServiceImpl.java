@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TripServiceImpl implements TripService {
@@ -25,64 +26,24 @@ public class TripServiceImpl implements TripService {
     }
 
     @Override
-    public TripEntity getOneById(Long id) throws NotFoundException {
-
-        if (tripRepository.existsById(id)) {
-            return tripRepository.getOne(id);
-        } else {
-            throw new NotFoundException("Not found entity with 'id':"+id);
-        }
+    public Optional<TripEntity> getOneById(Long id) {
+            return tripRepository.findById(id);
     }
 
     @Override
-    public void add(
-            String departure,
-            String destination,
-            long driverId,
-            long carId,
-            double driverPrice,
-            String startDate,
-            String endDate) {
-
-        TripEntity tripToSave = new TripEntity(
-                departure,
-                destination,
-                driverId,
-                carId,
-                driverPrice,
-                startDate,
-                endDate
-        );
+    public void add(String departure, String destination, long driverId, long carId, double driverPrice, String startDate, String endDate) {
+        TripEntity tripToSave = new TripEntity(departure, destination, driverId, carId, driverPrice, startDate, endDate);
         tripRepository.save(tripToSave);
     }
 
     @Override
-    public void update(
-            long id,
-            String departure,
-            String destination,
-            long driverId,
-            long carId,
-            double driverPrice,
-            String startDate,
-            String endDate
-    ) throws NotFoundException {
-
-        if (tripRepository.existsById(id)){
-            TripEntity tripToUpdate = tripRepository.getOne(id);
-        } else {
-            throw new NotFoundException("Not found entity with 'id':"+id);
-        }
+    public void update(long id, String departure, String destination, long driverId, long carId, double driverPrice, String startDate, String endDate) {
+        TripEntity tripToUpdate = tripRepository.getOne(id);
     }
 
     @Override
     public void delete(long id) throws NotFoundException {
-
-        if (tripRepository.existsById(id)){
-            tripRepository.deleteById(id);
-        } else {
-            throw new NotFoundException("Not found entity with 'id':"+id);
-        }
+        tripRepository.deleteById(id);
     }
 
     @Override

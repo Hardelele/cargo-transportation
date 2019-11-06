@@ -1,11 +1,8 @@
 package com.hardelele.ct.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 
 @Entity
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "trips")
 public class TripEntity {
 

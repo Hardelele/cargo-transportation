@@ -3,7 +3,6 @@ package com.hardelele.ct.services.impl;
 import com.hardelele.ct.models.TripEntity;
 import com.hardelele.ct.repositories.TripRepository;
 import com.hardelele.ct.services.TripService;
-import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,7 +41,7 @@ public class TripServiceImpl implements TripService {
     }
 
     @Override
-    public void delete(long id) throws NotFoundException {
+    public void delete(long id) {
         tripRepository.deleteById(id);
     }
 

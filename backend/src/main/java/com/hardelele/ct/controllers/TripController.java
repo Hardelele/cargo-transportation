@@ -3,9 +3,7 @@ package com.hardelele.ct.controllers;
 import com.hardelele.ct.models.TripEntity;
 import com.hardelele.ct.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -28,5 +26,15 @@ public class TripController {
     @GetMapping(value = "/trips/{id}")
     public Optional<TripEntity> getOne(@PathVariable Long id) {
         return tripService.getOneById(id);
+    }
+
+    @DeleteMapping(value = "/trips/delete/{id}")
+    public void deleteOne(@RequestParam Long id) {
+        tripService.delete(id);
+    }
+
+    @DeleteMapping(value = "/trips/delete")
+    public void deleteAll() {
+        tripService.deleteAll();
     }
 }

@@ -22,11 +22,11 @@ public class TripEntity {
 
     @Basic
     @Column(name = "driverId")
-    private long driverId;
+    private int driverId;
 
     @Basic
     @Column(name = "carId")
-    private long carId;
+    private int carId;
 
     @Basic
     @Column(name = "driverPrice")
@@ -46,8 +46,8 @@ public class TripEntity {
     public TripEntity(
             String departure,
             String destination,
-            long driverId,
-            long carId,
+            int driverId,
+            int carId,
             double driverPrice,
             String startDate,
             String endDate
@@ -85,19 +85,19 @@ public class TripEntity {
         this.destination = destination;
     }
 
-    public long getDriverId() {
+    public int getDriverId() {
         return driverId;
     }
 
-    public void setDriverId(long driverId) {
+    public void setDriverId(int driverId) {
         this.driverId = driverId;
     }
 
-    public long getCarId() {
+    public int getCarId() {
         return carId;
     }
 
-    public void setCarId(long carId) {
+    public void setCarId(int carId) {
         this.carId = carId;
     }
 

@@ -5,15 +5,28 @@ class App extends Component {
 
     render() {
         return (
-            <div className="MainContainer">
-                <header className="Header Container">
-                    <div className="HeaderButton">Панель</div>
-                    <div className="HeaderButton">Калькулятор</div>
-                    <div className="HeaderButton">Документы</div>
+            <main className="main">
+                <header className="header__container">
+                    <div className="header__logo"></div>
+                    <nav className="buttons__container">
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                    </nav>
                 </header>
-                <div className="Content Container"></div>
-                <footer className="Footer Container"></footer>
-            </div>
+                <div className="content__container">
+                    <aside className="sidebar">
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                    </aside>
+                    <section className="main__content">
+
+                    </section>
+                </div>
+            </main>
         );
     }
 }

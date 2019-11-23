@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.Header {
+
+}
+
+.Content {
+
+}
+
+.Footer {
+
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+}
+
+.HeaderButton {
+    width: 10vw;
+    height: 4vh;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 2vh;
+    margin: 10px;
+    font-family: "Roboto Thin";
+    border: black 1px solid;
+    color: #000000;
+}

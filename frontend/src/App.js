@@ -1,30 +1,32 @@
 import React, {Component} from 'react';
-import axios from "axios";
 import './css/App.css';
 
 class App extends Component {
 
-    state = {
-        trips: []
-    };
-
-    componentDidMount() {
-        axios.get('https://localhost:8081/trips')
-            .then(response => {
-                console.log(this.state.trips);
-                const trips = response.data;
-                this.setState({
-                    trips
-                });
-            })
-    }
-
     render() {
         return (
-            <div className="App">
+            <main className="main">
+                <header className="header__container">
+                    <div className="header__logo"></div>
+                    <nav className="buttons__container">
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                    </nav>
+                </header>
+                <div className="content__container">
+                    <aside className="sidebar">
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                        <div className="nav__button"></div>
+                    </aside>
+                    <section className="main__content">
 
-                { this.state.trips.map(trip => <div>{trip.destination}</div>)}
-            </div>
+                    </section>
+                </div>
+            </main>
         );
     }
 }

@@ -3,37 +3,42 @@
     padding: 0px;
 }
 
-.MainContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-.Header {
+.main {
 
 }
 
-.Content {
+/* Header */
+
+.header__container {
 
 }
 
-.Footer {
+.header__logo {
 
 }
 
-.Container {
-    display: flex;
-    flex-direction: row;
+.buttons__container {
+
 }
 
-.HeaderButton {
-    width: 10vw;
-    height: 4vh;
-    background: #FFFFFF;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 2vh;
-    margin: 10px;
-    font-family: "Roboto Thin";
-    border: black 1px solid;
-    color: #000000;
+/* Content */
+
+.content__container {
+
+}
+
+.main__content {
+
+}
+
+/* Sidebar */
+
+.sidebar {
+
+}
+
+/* Elements */
+
+.nav__button {
+
 }

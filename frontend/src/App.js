@@ -1,20 +1,23 @@
 import React, {Component} from 'react';
 import './css/App.css';
 import {HeaderMenu} from "./components/HeaderMenu";
-import {Sidebar} from "./components/Sidebar";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {Home} from "./pages/Home";
+import {ControlPanel} from "./pages/ControlPanel";
 
 class App extends Component {
 
     render() {
         return (
-            <main className="main">
-                <HeaderMenu/>
-                <div className="content__container">
-                    <Sidebar/>
-                    <section className="main__content">
-                    </section>
-                </div>
-            </main>
+            <BrowserRouter>
+                <main className="main">
+                    <HeaderMenu/>
+                    <Switch>
+                        <Route path="/" exact component={Home}/>
+                        <Route path="/panel" component={ControlPanel}/>
+                    </Switch>
+                </main>
+            </BrowserRouter>
         );
     }
 }

@@ -104,6 +104,15 @@
     text-decoration: none;
 }
 
+.nav_link:hover {
+    color: #EEE;
+    text-decoration: underline;
+}
+
+.nav_link:active {
+    color: #BBB;
+}
+
 /* Home page */
 
 .home__container {

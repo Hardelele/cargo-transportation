@@ -14,43 +14,7 @@
     font-family: Roboto;
 }
 
-/* Header */
-
-.header__container {
-    display: flex;
-    flex-direction: row;
-    background: #444;
-    height: 40px;
-    max-height: 40px;
-}
-
-.header__logo {
-    font-family: Roboto;
-    font-size: 20px;
-    color: #FFFFFF;
-    width: 200px;
-    padding-top: 8px;
-    text-align: center;
-    min-width: 200px;
-}
-
-.buttons__container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row;
-}
-
-.nav__button {
-    padding-top: 8px;
-    color: #FFFFFF;
-    font-size: 20px;
-    max-height: 40px;
-    height: 40px;
-    max-height: 40px;
-    margin-left: 2vw;
-}
-
-/* Sidebar and content container */
+/* Content container */
 
 .content__container {
     flex-grow: 1;
@@ -58,67 +22,3 @@
     flex-direction: row;
 }
 
-/* Content */
-
-.main__content {
-
-}
-
-/* Sidebar */
-
-.sidebar {
-    width: 200px;
-    background: #FFF;
-}
-
-.sidebar__button {
-    display: flex;
-    flex-direction: row;
-    /*border-bottom: #D5D5D5 1px solid;*/
-    height: 28px;
-    max-height: 28px;
-    width: 200px;
-    font-size: 16px;
-}
-
-.sidebar_button_text {
-    padding-top: 6px;
-    padding-left: 6px;
-    flex-grow: 1;
-}
-
-.sidebar_button_icon {
-    width: 28px;
-    /*border-right: #D5D5D5 1px solid;*/
-}
-
-/* Elements */
-
-.nav_link:link {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.nav_link:visited {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.nav_link:hover {
-    color: #EEE;
-    text-decoration: underline;
-}
-
-.nav_link:active {
-    color: #BBB;
-}
-
-/* Home page */
-
-.home__container {
-    justify-content: center;
-}
-
-.home__content {
-    background: #FFFFFF;
-}

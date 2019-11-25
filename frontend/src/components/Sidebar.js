@@ -1,4 +1,4 @@
-import '../css/App.css';
+import '../css/components/sidebar.css';
 import React from "react";
 
 export const Sidebar = () => (

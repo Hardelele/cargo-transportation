@@ -1,0 +1,8 @@
+.home__container {
+    justify-content: center;
+}
+
+.home__content {
+    flex-grow: 1;
+    background: #FFFFFF;
+}

@@ -1,0 +1,25 @@
+.sidebar {
+    width: 200px;
+    background: #FFF;
+}
+
+.sidebar__button {
+    display: flex;
+    flex-direction: row;
+    /*border-bottom: #D5D5D5 1px solid;*/
+    height: 28px;
+    max-height: 28px;
+    width: 200px;
+    font-size: 16px;
+}
+
+.sidebar_button_text {
+    padding-top: 6px;
+    padding-left: 6px;
+    flex-grow: 1;
+}
+
+.sidebar_button_icon {
+    width: 28px;
+    /*border-right: #D5D5D5 1px solid;*/
+}

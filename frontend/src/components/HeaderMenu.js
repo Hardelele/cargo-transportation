@@ -1,4 +1,5 @@
-import '../css/App.css';
+import '../css/components/header.css'
+import '../css/components/nav.css';
 import React from "react";
 import {NavLink} from "react-router-dom";
 

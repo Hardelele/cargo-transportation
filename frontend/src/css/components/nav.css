@@ -16,3 +16,12 @@
 .nav_link:active {
     color: #BBB;
 }
+
+.logo_link:hover {
+    color: #EEE;
+    text-decoration: none;
+}
+
+.logo_link:active {
+    color: #BBB;
+}

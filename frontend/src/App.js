@@ -1,22 +1,24 @@
 import React, {Component} from 'react';
-import './css/App.css';
-import {HeaderMenu} from "./components/HeaderMenu";
+import './css/app.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import {Home} from "./pages/Home";
-import {ControlPanel} from "./pages/ControlPanel";
+import Home from "./pages/Home";
+import Auth from "./pages/Auth";
+import Panel from "./pages/Panel";
+import Calc from "./pages/Calc";
 
 class App extends Component {
 
     render() {
         return (
             <BrowserRouter>
-                <main className="main">
-                    <HeaderMenu/>
+                <div className="main__container">
                     <Switch>
                         <Route path="/" exact component={Home}/>
-                        <Route path="/panel" component={ControlPanel}/>
+                        <Route path="/auth" component={Auth}/>
+                        <Route path="/panel" component={Panel}/>
+                        <Route path="/calc" component={Calc}/>
                     </Switch>
-                </main>
+                </div>
             </BrowserRouter>
         );
     }

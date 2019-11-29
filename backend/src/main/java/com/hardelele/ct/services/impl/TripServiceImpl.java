@@ -30,9 +30,10 @@ public class TripServiceImpl implements TripService {
     }
 
     @Override
-    public void add(String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
+    public TripEntity add(String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
         TripEntity tripToSave = new TripEntity(departure, destination, driverId, carId, driverPrice, startDate, endDate);
         tripRepository.save(tripToSave);
+        return tripToSave;
     }
 
     @Override

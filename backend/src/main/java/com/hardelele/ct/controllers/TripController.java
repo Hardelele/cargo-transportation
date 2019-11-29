@@ -1,5 +1,6 @@
 package com.hardelele.ct.controllers;
 
+import com.hardelele.ct.dto.TripDto;
 import com.hardelele.ct.models.TripEntity;
 import com.hardelele.ct.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +30,18 @@ public class TripController {
     }
 
     @DeleteMapping(value = "/trips/delete/{id}")
-    public void deleteOne(@RequestParam Long id) {
+    public void deleteOne(@PathVariable Long id) {
         tripService.delete(id);
     }
 
     @DeleteMapping(value = "/trips/delete")
     public void deleteAll() {
         tripService.deleteAll();
+    }
+
+    @PostMapping("/trips/add")
+    public TripEntity addTrip(@RequestBody TripDto tripDto) {
+        return tripService.add(tripDto.getDeparture(), tripDto.getDestination(), tripDto.getDriverId(),
+                tripDto.getCarId(), tripDto.getDriverPrice(), tripDto.getStartDate(), tripDto.getEndDate());
     }
 }

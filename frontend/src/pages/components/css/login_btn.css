@@ -1,0 +1,36 @@
+.login_button {
+    margin-top: 20px;
+    margin-right: 40px;
+    padding-top: 2px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+.nav_link:link {
+    color: black;
+    text-decoration: none;
+    background: #97ecff;
+    box-shadow: #549193 2px 2px;
+}
+
+.nav_link:visited {
+    color: black;
+    text-decoration: none;
+    background: #97ecff;
+    box-shadow: #549193 2px 2px;
+}
+
+.nav_link:hover {
+    color: black;
+    background: #acf7ff;
+    box-shadow: #6a797d 2px 2px;
+}
+
+.nav_link:active {
+    color: black;
+    background: #ffffff;
+    box-shadow: #7d7d7d 2px 2px;
+}

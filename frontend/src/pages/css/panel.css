@@ -31,17 +31,15 @@
     color: #696969;
 }
 
-.header_nav__container {
-    display: flex;
-    flex-direction: column;
+.profile__container {
     flex-grow: 1;
 }
 
-.profile__container {
-    border-radius: 50%;
-    background-color: #000000;
+.profile_img {
     width: 80px;
     height: 80px;
+    border-radius: 50%;
+    background-color: #000000;
     float: right;
     margin-top: 10px;
     margin-right: 10px;

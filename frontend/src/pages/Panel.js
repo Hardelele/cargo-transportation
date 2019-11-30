@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import "./css/panel.css"
+import PanelNav from "./components/PanelNav";
 
 class Panel extends Component {
     render() {
@@ -10,9 +11,7 @@ class Panel extends Component {
                         <div className="title-upper">Cargo Transportation</div>
                         <div className="title-bottom">Control panel</div>
                     </div>
-                    <nav className="header_nav__container">
-                        <div className="header_button"></div>
-                    </nav>
+                    <PanelNav/>
                     <div className="profile__container">
                         <div className="profile_img"></div>
                     </div>

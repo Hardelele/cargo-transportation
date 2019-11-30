@@ -19,6 +19,7 @@ class Home extends Component {
                     <div className="center__empty_space"></div>
                     <div className="center_content__info">
                         <div className="card">
+                            <div className="card_img"></div>
                             <div className="title_card">Who we are?</div>
                             <div className="title_card__after"></div>
                             <div className="text_card">
@@ -27,7 +28,6 @@ class Home extends Component {
                                 we earned trust from our customers and
                                 learned to do their job efficiently.
                             </div>
-                            <div className="card_img"></div>
                         </div>
                         <div className="card">
                             <div className="title_card"></div>

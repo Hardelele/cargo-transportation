@@ -1,8 +1,46 @@
 .panel__container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .header-panel {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 100px;
+    background: #97ecff;
+}
 
+.header_logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding-left: 10px;
+}
+
+.title-upper {
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.title-bottom {
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;
+    color: #696969;
+}
+
+.profile__container {
+    flex-grow: 1;
+}
+
+.profile_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #000000;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
 }

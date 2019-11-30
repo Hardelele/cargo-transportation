@@ -30,19 +30,6 @@
     font-family: 'Bebas Neue', cursive;
 }
 
-.login_button {
-    margin-top: 20px;
-    margin-right: 40px;
-    padding-top: 2px;
-    text-align: center;
-    background: #97ecff;
-    font-size: 24px;
-    border-radius: 10px;
-    box-shadow: #549193 2px 2px;
-    width: 100px;
-    height: 40px;
-}
-
 .empty_space {
     flex-grow: 1;
 }
@@ -81,17 +68,34 @@
 .card {
     display: flex;
     flex-direction: column;
+    white-space: pre-wrap;
 }
 
 .text_card {
     width: 200px;
-    height: 300px;
-    background: #97ecff;
+    overflow-x:hidden;
+    text-overflow: clip;
+    text-align: justify;
 }
 
 .title_card {
     font-family: 'Bebas Neue', cursive;
     font-size: 20px;
+}
+
+.card_img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+    background-image: url("../img/info1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.title_card__after {
+    width: 200px;
+    height: 1px;
+    background: #9b9b9b;
 }
 
 /* Page elements */

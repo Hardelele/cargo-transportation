@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 
-class Form extends Component {
+class Register extends Component {
     render() {
         return (
-            <div className="form__container">
-
+            <div className="reg__container">
             </div>
         );
     }
 }
 
-export default Form;
+export default Register;

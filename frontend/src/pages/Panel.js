@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import Form from "../components/Form";
 
 class Panel extends Component {
     render() {
         return (
             <div className="panel__container">
-                <Form/>
+                <div className="header-panel">
+
+                </div>
+                <div className="center-panel"></div>
+                <div className="footer-panel"></div>
             </div>
         );
     }

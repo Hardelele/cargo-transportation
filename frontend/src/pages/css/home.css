@@ -30,19 +30,6 @@
     font-family: 'Bebas Neue', cursive;
 }
 
-.login_button {
-    margin-top: 20px;
-    margin-right: 40px;
-    padding-top: 2px;
-    text-align: center;
-    background: #97ecff;
-    font-size: 24px;
-    border-radius: 10px;
-    box-shadow: #549193 2px 2px;
-    width: 100px;
-    height: 40px;
-}
-
 .empty_space {
     flex-grow: 1;
 }

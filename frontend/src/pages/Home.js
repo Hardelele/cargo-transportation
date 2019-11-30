@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import './css/home.css';
+import LoginButton from "./components/LoginButton";
 
 class Home extends Component {
     render() {
         return (
             <div className="home__container">
                 <div className="top__container top__background">
-                    <div className="login_button">SIGN IN</div>
+                    <LoginButton/>
                     <div className="empty_space"></div>
                     <div className="top_logo__container">
                         <div className="logo_margin"></div>

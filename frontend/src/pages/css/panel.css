@@ -32,7 +32,6 @@
 }
 
 .profile__container {
-    flex-grow: 1;
 }
 
 .profile_img {
@@ -43,4 +42,10 @@
     float: right;
     margin-top: 10px;
     margin-right: 10px;
+}
+
+.center-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

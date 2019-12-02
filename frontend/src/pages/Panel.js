@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./css/panel.css"
 import PanelNav from "./components/PanelNav";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 import Manage from "./components/Manage";
 import Docs from "./components/Docs";
@@ -19,13 +19,12 @@ class Panel extends Component {
                     <PanelNav/>
                     <div className="profile__container">
                         <div className="profile_img"></div>
+                        <div className="profile_name"></div>
                     </div>
                 </div>
-                <div className="center-panel">
-                    <Route path="/panel/manage" component={Manage}/>
-                    <Route path="/panel/docs" component={Docs}/>
-                    <Route path="/panel/dash" component={Dash}/>
-                </div>
+                <Route path="/panel/manage" component={Manage}/>
+                <Route path="/panel/docs" component={Docs}/>
+                <Route path="/panel/dash" component={Dash}/>
                 <div className="footer-panel"></div>
             </div>
         );

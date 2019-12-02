@@ -10,6 +10,7 @@
     flex-grow: 1;
     height: 100px;
     background: #97ecff;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,.3);
 }
 
 .header_logo {
@@ -18,6 +19,8 @@
     justify-content: center;
     width: 400px;
     padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .title-upper {
@@ -35,8 +38,8 @@
 }
 
 .profile_img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: #000000;
     float: right;
@@ -48,4 +51,41 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.sidebar {
+    margin-left: 10vw;
+    margin-top: 10vh;
+    width: 350px;
+}
+
+.manage__container {
+    margin-top: 5vh;
+    flex-grow: 1;
+}
+
+.sidebar_button {
+    margin-top: 50px;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.sidebar_button:link {
+    color: #1e707d;
+    text-decoration: none;
+}
+
+.sidebar_button:visited {
+    color: #1e707d;
+    text-decoration: none;
+}
+
+.sidebar_button:hover {
+    color: #1e8e9b;
+    text-decoration: none;
+}
+
+.sidebar_button:active {
+    color: #27a4af;
+    text-decoration: none;
 }

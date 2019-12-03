@@ -8,7 +8,7 @@ public class AutoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     @Column(name = "mark")
     private String mark;
@@ -29,11 +29,11 @@ public class AutoEntity {
         this.number = number;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

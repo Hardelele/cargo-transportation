@@ -8,7 +8,7 @@ public class DriverEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     @Column(name = "firstName")
     private String firstName;
@@ -49,11 +49,11 @@ public class DriverEntity {
         this.passportScanUrl = passportScanUrl;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

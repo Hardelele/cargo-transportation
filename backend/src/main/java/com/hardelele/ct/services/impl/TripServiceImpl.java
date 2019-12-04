@@ -37,8 +37,23 @@ public class TripServiceImpl implements TripService {
     }
 
     @Override
-    public void update(long id, String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
-        TripEntity tripToUpdate = tripRepository.getOne(id);
+    public TripEntity update(long id, String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
+        Optional<TripEntity> newTripEntity;
+        if (tripRepository.existsById(id)) {
+            newTripEntity = tripRepository.findById(id);
+            newTripEntity.get().setDeparture(departure);
+            newTripEntity.get().setDestination(destination);
+            newTripEntity.get().setDriverId(driverId);
+            newTripEntity.get().setCarId(carId);
+            newTripEntity.get().setDriverPrice(driverPrice);
+            newTripEntity.get().setStartDate(startDate);
+            newTripEntity.get().setEndDate(endDate);
+            tripRepository.save(newTripEntity.get());
+            return newTripEntity.get();
+        } else {
+            TripEntity tripToSave = this.add(departure, destination, driverId, carId, driverPrice, startDate, endDate);
+            return tripToSave;
+        }
     }
 
     @Override

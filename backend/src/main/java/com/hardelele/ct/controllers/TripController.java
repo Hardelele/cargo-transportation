@@ -44,4 +44,11 @@ public class TripController {
         return tripService.add(tripDto.getDeparture(), tripDto.getDestination(), tripDto.getDriverId(),
                 tripDto.getCarId(), tripDto.getDriverPrice(), tripDto.getStartDate(), tripDto.getEndDate());
     }
+
+    @PutMapping("/trips/update")
+    public TripEntity updateTrip(@PathVariable Long id, @RequestBody TripDto tripDto) {
+        return tripService.update(id ,tripDto.getDeparture(), tripDto.getDestination(),
+                tripDto.getDriverId(), tripDto.getCarId(), tripDto.getDriverPrice(),
+                tripDto.getStartDate(), tripDto.getEndDate());
+    }
 }

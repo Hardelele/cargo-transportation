@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "drivers")
-public class DriverEntity {
+public class DriverModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,11 +34,11 @@ public class DriverEntity {
     @Column(name = "passportScanUrl")
     private String passportScanUrl;
 
-    public DriverEntity() {
+    public DriverModel() {
 
     }
 
-    public DriverEntity(String firstName, String secondName, String patronymicName, String nationality, long passportSeries, long passportNumber, String birth, String passportScanUrl) {
+    public DriverModel(String firstName, String secondName, String patronymicName, String nationality, long passportSeries, long passportNumber, String birth, String passportScanUrl) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.patronymicName = patronymicName;

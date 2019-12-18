@@ -1,6 +1,6 @@
 package com.hardelele.ct.services.impl;
 
-import com.hardelele.ct.models.TripEntity;
+import com.hardelele.ct.models.TripModel;
 import com.hardelele.ct.repositories.TripRepository;
 import com.hardelele.ct.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,25 +20,25 @@ public class TripServiceImpl implements TripService {
     }
 
     @Override
-    public List<TripEntity> getAll() {
+    public List<TripModel> getAll() {
         return tripRepository.findAll();
     }
 
     @Override
-    public Optional<TripEntity> getOneById(Long id) {
+    public Optional<TripModel> getOneById(Long id) {
             return tripRepository.findById(id);
     }
 
     @Override
-    public TripEntity add(String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
-        TripEntity tripToSave = new TripEntity(departure, destination, driverId, carId, driverPrice, startDate, endDate);
+    public TripModel add(String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
+        TripModel tripToSave = new TripModel(departure, destination, driverId, carId, driverPrice, startDate, endDate);
         tripRepository.save(tripToSave);
         return tripToSave;
     }
 
     @Override
-    public TripEntity update(long id, String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
-        Optional<TripEntity> newTripEntity;
+    public TripModel update(long id, String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
+        Optional<TripModel> newTripEntity;
         if (tripRepository.existsById(id)) {
             newTripEntity = tripRepository.findById(id);
             newTripEntity.get().setDeparture(departure);
@@ -51,7 +51,7 @@ public class TripServiceImpl implements TripService {
             tripRepository.save(newTripEntity.get());
             return newTripEntity.get();
         } else {
-            TripEntity tripToSave = this.add(departure, destination, driverId, carId, driverPrice, startDate, endDate);
+            TripModel tripToSave = this.add(departure, destination, driverId, carId, driverPrice, startDate, endDate);
             return tripToSave;
         }
     }

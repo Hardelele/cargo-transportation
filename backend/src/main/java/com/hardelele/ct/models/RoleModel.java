@@ -3,7 +3,7 @@ package com.hardelele.ct.models;
 import javax.persistence.*;
 
 @Entity
-public class RoleEntity {
+public class RoleModel {
 
     @Column(name = "id")
     @Id
@@ -13,10 +13,10 @@ public class RoleEntity {
     @Column(name = "name")
     private String roleName;
 
-    public RoleEntity() {
+    public RoleModel() {
     }
 
-    public RoleEntity(String roleName) {
+    public RoleModel(String roleName) {
         this.roleName = roleName;
     }
 

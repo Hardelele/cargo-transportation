@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Form from "./Form";
 
 class Manage extends Component {
     render() {
@@ -18,7 +19,7 @@ class Manage extends Component {
                     </ul>
                 </div>
                 <div className="manage__container">
-
+                    <Form/>
                 </div>
             </div>
         );

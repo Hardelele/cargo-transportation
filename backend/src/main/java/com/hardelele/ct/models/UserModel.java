@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class UserEntity {
+public class UserModel {
 
     @Column(name = "id")
     @Id
@@ -28,10 +28,10 @@ public class UserEntity {
     @Column(name = "role", columnDefinition = "varchar(255) default 'user'")
     private String role;
 
-    public UserEntity() {
+    public UserModel() {
     }
 
-    public UserEntity(String login, String password, String firstName, String secondName, String role) {
+    public UserModel(String login, String password, String firstName, String secondName, String role) {
         this.login = login;
         this.password = password;
         this.firstName = firstName;

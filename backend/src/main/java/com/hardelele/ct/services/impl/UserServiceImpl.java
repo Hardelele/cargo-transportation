@@ -1,6 +1,6 @@
 package com.hardelele.ct.services.impl;
 
-import com.hardelele.ct.models.UserEntity;
+import com.hardelele.ct.models.UserModel;
 import com.hardelele.ct.repositories.UserRepository;
 import com.hardelele.ct.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +19,22 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public List<UserEntity> getAll() {
+    public List<UserModel> getAll() {
         return userRepository.findAll();
     }
 
     @Override
-    public Optional<UserEntity> getOne(long id) {
+    public Optional<UserModel> getOne(long id) {
         return userRepository.findById(id);
     }
 
     @Override
-    public UserEntity add(String login, String password, String firstName, String secondName, String role) {
+    public UserModel add(String login, String password, String firstName, String secondName, String role) {
         return null;
     }
 
     @Override
-    public UserEntity update(long id, String login, String password, String firstName, String secondName, String role) {
+    public UserModel update(long id, String login, String password, String firstName, String secondName, String role) {
         return null;
     }
 

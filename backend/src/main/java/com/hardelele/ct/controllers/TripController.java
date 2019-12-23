@@ -1,7 +1,7 @@
 package com.hardelele.ct.controllers;
 
 import com.hardelele.ct.dto.TripDto;
-import com.hardelele.ct.models.TripEntity;
+import com.hardelele.ct.models.TripModel;
 import com.hardelele.ct.services.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,12 +20,12 @@ public class TripController {
     }
 
     @GetMapping(value = "/trips")
-    public List<TripEntity> getAll() {
+    public List<TripModel> getAll() {
         return tripService.getAll();
     }
 
     @GetMapping(value = "/trips/{id}")
-    public Optional<TripEntity> getOne(@PathVariable Long id) {
+    public Optional<TripModel> getOne(@PathVariable Long id) {
         return tripService.getOneById(id);
     }
 
@@ -40,13 +40,13 @@ public class TripController {
     }
 
     @PostMapping("/trips/add")
-    public TripEntity addTrip(@RequestBody TripDto tripDto) {
+    public TripModel addTrip(@RequestBody TripDto tripDto) {
         return tripService.add(tripDto.getDeparture(), tripDto.getDestination(), tripDto.getDriverId(),
                 tripDto.getCarId(), tripDto.getDriverPrice(), tripDto.getStartDate(), tripDto.getEndDate());
     }
 
     @PutMapping("/trips/update")
-    public TripEntity updateTrip(@PathVariable Long id, @RequestBody TripDto tripDto) {
+    public TripModel updateTrip(@PathVariable Long id, @RequestBody TripDto tripDto) {
         return tripService.update(id ,tripDto.getDeparture(), tripDto.getDestination(),
                 tripDto.getDriverId(), tripDto.getCarId(), tripDto.getDriverPrice(),
                 tripDto.getStartDate(), tripDto.getEndDate());

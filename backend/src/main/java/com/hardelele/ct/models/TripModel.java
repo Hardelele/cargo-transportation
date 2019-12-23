@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "trips")
-public class TripEntity {
+public class TripModel {
 
     @Basic
     @Column(name = "id")
@@ -40,10 +40,10 @@ public class TripEntity {
     @Column(name = "endDate")
     private String endDate;
 
-    public TripEntity() {
+    public TripModel() {
     }
 
-    public TripEntity(
+    public TripModel(
             String departure,
             String destination,
             int driverId,

@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "auto")
-public class AutoEntity {
+public class AutoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +19,11 @@ public class AutoEntity {
     @Column(name = "number")
     private long number;
 
-    public AutoEntity() {
+    public AutoModel() {
         
     }
 
-    public AutoEntity(String mark, String model, long number) {
+    public AutoModel(String mark, String model, long number) {
         this.mark = mark;
         this.model = model;
         this.number = number;

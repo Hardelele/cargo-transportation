@@ -1,0 +1,48 @@
+.form_row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Roboto';
+}
+
+.form_top {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.form_short_elem {
+    width: 24px;
+    text-align: center;
+    background-color: #97ecff;
+    border: #1e707d 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.form_elem {
+    width: 100px;
+    text-align: center;
+    background-color: #97ecff;
+    border: #1e707d 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.form_mid_elem {
+    width: 150px;
+    text-align: center;
+    background-color: #97ecff;
+    border: #1e707d 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    border: #1e707d 1px solid;
+    margin-right: 200px;
+    margin-top: 20px;
+    background-color: #f4ffff;
+    height: 600px;
+}
+

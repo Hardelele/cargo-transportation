@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DriverRepository extends JpaRepository<DriverModel,Long> {
+public interface DriverRepository extends JpaRepository<DriverModel,Integer> {
 
 }

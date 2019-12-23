@@ -31,28 +31,28 @@ public class TripServiceImpl implements TripService {
 
     @Override
     public TripModel add(String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
-        TripModel tripToSave = new TripModel(departure, destination, driverId, carId, driverPrice, startDate, endDate);
-        tripRepository.save(tripToSave);
-        return tripToSave;
+        TripModel newTrip = new TripModel(departure, destination, driverId, carId, driverPrice, startDate, endDate);
+        tripRepository.save(newTrip);
+        return newTrip;
     }
 
     @Override
     public TripModel update(long id, String departure, String destination, int driverId, int carId, double driverPrice, String startDate, String endDate) {
-        Optional<TripModel> newTripEntity;
+        Optional<TripModel> updatedTrip;
         if (tripRepository.existsById(id)) {
-            newTripEntity = tripRepository.findById(id);
-            newTripEntity.get().setDeparture(departure);
-            newTripEntity.get().setDestination(destination);
-            newTripEntity.get().setDriverId(driverId);
-            newTripEntity.get().setCarId(carId);
-            newTripEntity.get().setDriverPrice(driverPrice);
-            newTripEntity.get().setStartDate(startDate);
-            newTripEntity.get().setEndDate(endDate);
-            tripRepository.save(newTripEntity.get());
-            return newTripEntity.get();
+            updatedTrip = tripRepository.findById(id);
+            updatedTrip.get().setDeparture(departure);
+            updatedTrip.get().setDestination(destination);
+            updatedTrip.get().setDriverId(driverId);
+            updatedTrip.get().setCarId(carId);
+            updatedTrip.get().setDriverPrice(driverPrice);
+            updatedTrip.get().setStartDate(startDate);
+            updatedTrip.get().setEndDate(endDate);
+            tripRepository.save(updatedTrip.get());
+            return updatedTrip.get();
         } else {
-            TripModel tripToSave = this.add(departure, destination, driverId, carId, driverPrice, startDate, endDate);
-            return tripToSave;
+            TripModel newTrip = this.add(departure, destination, driverId, carId, driverPrice, startDate, endDate);
+            return newTrip;
         }
     }
 
